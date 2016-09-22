@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 6 - Calculo de la letra del DNI</title>
+<script type="text/javascript">
+
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+var asignaturas = ["DAW","DWEC","DWES","DIW","EIE"];
+
+/*var notas = newArray();
+notas ["suspenso"] = 0,1,2,3,4;
+notas ["aprobado"] = 5;
+notas ["bien"] = 6;
+notas ["notable"] = 7;
+notas ["sobresaliente"] = 9;*/
+
+			
+//INTRODUCIR DATOS POR TECLADO
+
+var nombre = prompt("Introduce tu nombre");
+var numero = prompt("Introduce tu número de DNI (sin la letra)");
+var letra = prompt("Introduce la letra de tu DNI (en mayúsculas)");
+letra = letra.toUpperCase();
+
+//VALIDACION DEL DNI
+
+if(numero < 0 || numero > 99999999) {
+	alert("El número proporcionado no es válido");
+}
+else {
+	var letraCalculada = letras[numero % 23];
+	if(letraCalculada != letra) {
+		alert("La letra o el número proporcionados no son correctos");
+	}
+	else {
+		alert("El número de DNI y su letra son correctos");
+	}
+}
+
+/*var notaDIW = prompt ("Introduce tu nota");
+var notaDAW = prompt ("Introduce tu nota");
+var notaDWES = prompt ("Introduce tu nota");
+var notaDWEC = prompt ("Introduce tu nota");
+
+/*if (var nota = "suspenso") {
+	alert("");
+	document.body.style.backgroundColor = "red";
+} else if (var nota = "sufiente") {
+	document.body.style.backgroundColor = "orange";
+} else if (var nota = "bien") {
+	document.body.style.backgroundColor = "green";
+} else if (var nota = "notable") {
+	document.body.style.backgroundColor = "blue";
+} else if (var nota = "sobresaliente") {
+	document.body.style.backgroundColor = "yellow";
+} */
+
+//<input type="button" name="imprimir" value="imprimir pantalla" onclick="window.print();"></input>
+   
+</script>
+</head>
+
+<body>
+<p>Esta página calcula la letra del DNI</p>
+</body>
+</html>
