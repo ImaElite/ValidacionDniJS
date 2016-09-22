@@ -4,7 +4,7 @@
  */
 var nombre;
 var dni;
-var colores = ["red", "red", "red", "red", "red", "orange", "yellow", "cyan", "green", "gray", "purple"];
+var colores = ["red", "red", "red", "red", "red", "orange", "yellow", "green", "cyan", "pink", "purple"];
 var notas = [["DIW", 0], ["DAW", 0], ["PHP", 0], ["JVS", 0]];
 nombre = prompt("nombre?");
 do {
@@ -21,7 +21,7 @@ notas[3][1] = prompt("JVS?");
 document.write("<table>\n<tr>\n<th>Asignatura</th>\n<th>Nota</th>\n<\tr>\n");
 for (i = 0; i < notas.length; i++) {
     alert(colores[notas[i][1]]);
-    document.write("<tr><td>", notas[i][0], '</td>\n<td bgcolor="', colores[notas[i][1]], ";\">", notas[i][1], "</td></tr>\n");
+    document.write("<tr><td>", notas[i][0], '</td>\n<td bgcolor="', colores[notas[i][1]], '">', notas[i][1], "</td></tr>\n");
 }
 document.write("</table>");
 
