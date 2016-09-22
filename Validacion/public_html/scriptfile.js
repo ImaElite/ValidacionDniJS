@@ -12,9 +12,8 @@ notas[0][1]=prompt("DIW?");
 notas[1][1]=prompt("DAW?");
 notas[2][1]=prompt("PHP?");
 notas[3][1]=prompt("JVS?");
-document.write("<table>\n<tr>\n<th>Nombre Asignatura</th>\n<th>Nota</th>\n<\tr>\n");
-var nota;
-for (nota in notas){
-    document.write("<tr><td>", nota[0], "</td>\n<td>", nota[1], "</td></tr>\n");
+document.write("<table>\n<tr>\n<th>Asignatura</th>\n<th>Nota</th>\n<\tr>\n");
+for (i=0; len=notas.length; i++<len){
+    document.write("<tr><td>", notas[i][0], "</td>\n<td>", notas[i][1], "</td></tr>\n");
 }
 document.write("</table>");
