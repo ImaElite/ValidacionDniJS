@@ -20,7 +20,7 @@ notas[2][1] = prompt("PHP?");
 notas[3][1] = prompt("JVS?");
 document.write("<table>\n<tr>\n<th>Asignatura</th>\n<th>Nota</th>\n<\tr>\n");
 for (i = 0; i < notas.length; i++) {
-    alert(colores[notas[i][1]]);
+    //alert(colores[notas[i][1]]);
     document.write("<tr><td>", notas[i][0], '</td>\n<td bgcolor="', colores[notas[i][1]], '">', notas[i][1], "</td></tr>\n");
 }
 document.write("</table>");
