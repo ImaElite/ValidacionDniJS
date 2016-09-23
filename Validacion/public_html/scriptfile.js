@@ -1,31 +1,46 @@
-/* 
- * DAW2
- * Alan Fox Echezarreta
- */
-var nombre;
-var dni;
+/////////////Declaracion de arrays
+
 var colores = ["red", "red", "red", "red", "red", "orange", "yellow", "green", "cyan", "pink", "purple"];
 var notas = [["DIW", 0], ["DAW", 0], ["PHP", 0], ["JVS", 0]];
-nombre = prompt("nombre?");
-do {
 
-    var dni = prompt("Escribe tu Dni ");
+///Declaracion de variables
+var nombre;
 
-    dni_correcto = nif(dni);
-} while (dni_correcto === false);
+nombre_dni();
 
-notas[0][1] = prompt("DIW?");
-notas[1][1] = prompt("DAW?");
-notas[2][1] = prompt("PHP?");
-notas[3][1] = prompt("JVS?");
-document.write("<table>\n<tr>\n<th>Asignatura</th>\n<th>Nota</th>\n<\tr>\n");
+////////////////Asignaturas, que sean solo números, entre 0 y 10
+
+var asig_diw = meter_notas(asig_diw, "DIW");
+var asig_daw = meter_notas(asig_daw, "DAW");
+var asig_php = meter_notas(asig_php, "PHP");
+var asig_jvs = meter_notas(asig_jvs, "JVS");
+
+///cargo esas notas en el array
+notas[0][1] = asig_diw;
+notas[1][1] = asig_daw;
+notas[2][1] = asig_php;
+notas[3][1] = asig_jvs;
+
+//creo el formulario en ventana
+
+document.write("<div id='a'>");
+document.write("<h1>Estas son tus notas: ");
+document.write(nombre);
+document.write("</h1>");
+document.write("<form>");
+document.write("<table border='1' width='35' cellspacing='4' cellpadding='4' align='center'><tr><th>Asignatura</th><th>Nota</th><\tr>");
 for (i = 0; i < notas.length; i++) {
     //alert(colores[notas[i][1]]);
     document.write("<tr><td>", notas[i][0], '</td>\n<td bgcolor="', colores[notas[i][1]], '">', notas[i][1], "</td></tr>\n");
 }
+document.write("<tr><td><input type='button' value='Imprimir' id='boton_imprimir' onclick='window.print();'></td><td><input type='button' value='Reiniciar' id='boton_salida' onclick=''></td></tr>");
+document.write("</form>");
 document.write("</table>");
+document.write("</div>");
 
+//////////////FUNCIONES
 
+//Funcion del dni
 
 function nif(dni) {
     var numero;
@@ -45,11 +60,38 @@ function nif(dni) {
         if (letra !== letr.toUpperCase()) {
             alert('Dni erroneo, la letra del NIF no se corresponde');
         } else {
-            alert('Dni correcto');
+            // alert('Dni correcto');
             correcto = true;
         }
     } else {
         alert('Dni erroneo, formato no válido');
     }
     return correcto;
+}
+
+///Funcion para meter las notas
+function meter_notas(a, b) {
+    do {
+        var a = parseInt(prompt("Introduce la nota de : " + b));
+        if (isNaN(a)) {
+            alert("No se admiten letras ni dejar en blanco el campo");
+        }
+        if (a > 10 || a <= -1) {
+            alert("Solo se admiten números de 0 a 10 para las notas");
+        }
+
+    } while (isNaN(a) || (a > 10 || a < 0) || a.length === 0);
+    return a;
+}
+
+///Funcion de pedir nombre y dni
+function nombre_dni() {
+
+    nombre = prompt("Introduce tu nombre:");
+    do {
+        var dni = prompt("Introduce tu Dni ");
+
+        dni_correcto = nif(dni);
+    } while (dni_correcto === false);
+
 }

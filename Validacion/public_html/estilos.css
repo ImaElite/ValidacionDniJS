@@ -1,0 +1,39 @@
+table{
+    background-color:#8AF7F5;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2959F5;
+
+}
+*{
+    font-weight: bold;
+}
+
+tr{
+    color:#3D3A3E;
+}
+th{
+    color:#0C7BAE;
+    background-color:#DCDAD9;
+}
+
+input{
+    font-size: 12px;
+    font-weight: bold;
+    background-color:#410616;
+    color: #F7EB6C;
+}
+h1{
+    color:#104DA7;
+    text-align:center;
+}
+#a{
+    width: 40%;
+    background-color:#3F93B4;
+    padding-bottom: 40px;
+    margin-left: 380px;
+    margin-top: 100px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #2959F5;
+}
