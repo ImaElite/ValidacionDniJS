@@ -30,10 +30,9 @@ document.write("</h1>");
 document.write("<form>");
 document.write("<table border='1' width='35' cellspacing='4' cellpadding='4' align='center'><tr><th>Asignatura</th><th>Nota</th><\tr>");
 for (i = 0; i < notas.length; i++) {
-    //alert(colores[notas[i][1]]);
-    document.write("<tr><td>", calificaiones[i], '</td>\n<td bgcolor="', colores[notas[i][1]], '">', notas[i][1], "</td></tr>\n");
+    document.write("<tr><td>", notas[i][0], '</td>\n<td bgcolor="', colores[notas[i][1]], '">', calificaiones[i], "</td></tr>\n");
 }
-document.write("<tr><td><input type='button' value='Imprimir' id='boton_imprimir' onclick='window.print();'></td><td><input type='button' value='Reiniciar' id='boton_salida' onclick=''></td></tr>");
+document.write("<tr><td><input type='button' value='Imprimir' id='boton_imprimir' onclick='window.print();'></td><td><input type='button' value='Reiniciar' id='boton_salida' onclick='<script>document.reload();</script>'></td></tr>");
 document.write("</form>");
 document.write("</table>");
 document.write("</div>");
