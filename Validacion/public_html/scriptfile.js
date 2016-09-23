@@ -1,8 +1,8 @@
 /////////////Declaracion de arrays
 
-var colores = ["red", "red", "red", "red", "red", "orange", "yellow", "green", "cyan", "pink", "purple"];
+var colores = ["red", "red", "red", "red", "red", "orange", "green", "blue", "blue", "yellow", "yellow"];
 var notas = [["DIW", 0], ["DAW", 0], ["PHP", 0], ["JVS", 0]];
-
+var calificaiones = ["Suspenso", "Suspenso", "Suspenso", "Suspenso", "Suspenso", "Suficiente", "Bien", "Notable", "Notable", "Sobresaliente", "Sobresaliente"]
 ///Declaracion de variables
 var nombre;
 
@@ -31,7 +31,7 @@ document.write("<form>");
 document.write("<table border='1' width='35' cellspacing='4' cellpadding='4' align='center'><tr><th>Asignatura</th><th>Nota</th><\tr>");
 for (i = 0; i < notas.length; i++) {
     //alert(colores[notas[i][1]]);
-    document.write("<tr><td>", notas[i][0], '</td>\n<td bgcolor="', colores[notas[i][1]], '">', notas[i][1], "</td></tr>\n");
+    document.write("<tr><td>", , '</td>\n<td bgcolor="', colores[notas[i][1]], '">', notas[i][1], "</td></tr>\n");
 }
 document.write("<tr><td><input type='button' value='Imprimir' id='boton_imprimir' onclick='window.print();'></td><td><input type='button' value='Reiniciar' id='boton_salida' onclick=''></td></tr>");
 document.write("</form>");
