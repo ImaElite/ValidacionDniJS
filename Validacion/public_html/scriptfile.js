@@ -32,7 +32,7 @@ document.write("<table border='1' width='35' cellspacing='4' cellpadding='4' ali
 for (i = 0; i < notas.length; i++) {
     document.write("<tr><td>", notas[i][0], '</td>\n<td bgcolor="', colores[notas[i][1]], '">', calificaciones[notas[i][1]], "</td></tr>\n");
 }
-document.write("<tr><td><input type='button' value='Imprimir' id='boton_imprimir' onclick='window.print();'></td><td><input type='button' value='Reiniciar' id='boton_salida' onclick='<script>document.reload();</script>'></td></tr>");
+document.write("<tr><td><input type='button' value='Imprimir' id='boton_imprimir' onclick='window.print();'></td><td><input type='button' value='Reiniciar' id='boton_salida' onclick='window.location.reload()'></td></tr>");
 document.write("</form>");
 document.write("</table>");
 document.write("</div>");
