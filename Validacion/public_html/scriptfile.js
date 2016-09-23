@@ -8,6 +8,7 @@ var nombre;
 
 nombre_dni();
 
+
 ////////////////Asignaturas, que sean solo números, entre 0 y 10
 
 var asig_diw = meter_notas(asig_diw, "DIW");
@@ -87,6 +88,8 @@ function meter_notas(a, b) {
 function nombre_dni() {
 
     nombre = prompt("Introduce tu nombre:");
+    //nombre primera letra en mayusculas
+    nombre=nombre.charAt(0).toUpperCase()+nombre.slice(1);
     do {
         var dni = prompt("Introduce tu Dni ");
 
